@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, Unit1, zcomponent
+  Forms, virtualdbgrid_package, rxnew, virtualdbtreeexlaz, Unit1, zcomponent
   { you can add units after this };
 
 {$R *.res}

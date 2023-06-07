@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, DBGrids,
-  ZConnection, ZDataset;
+  DBCtrls, RxDBGrid, RxDBGridPrintGrid, ZConnection, ZDataset;
 
 type
 
@@ -15,8 +15,11 @@ type
   TForm1 = class(TForm)
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    RxDBGrid1: TRxDBGrid;
     ZConnection1: TZConnection;
     ZTable1: TZTable;
+    procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -36,6 +39,7 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+
   try
     try
       ZConnection1.Connect;
@@ -56,7 +60,13 @@ end;
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
+  ZTable1.Close;
   ZConnection1.Disconnect;
+end;
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+
 end;
 
 end.
