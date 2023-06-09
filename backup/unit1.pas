@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, DBGrids,
-  DBCtrls, RxDBGrid, RxDBGridPrintGrid, ZConnection, ZDataset;
+  DBCtrls, RxDBGrid, RxDBGridPrintGrid, VirtualDBGrid, ZConnection, ZDataset;
 
 type
 
@@ -14,9 +14,9 @@ type
 
   TForm1 = class(TForm)
     DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     RxDBGrid1: TRxDBGrid;
+    VirtualDBGrid1: TVirtualDBGrid;
     ZConnection1: TZConnection;
     ZTable1: TZTable;
     procedure FormActivate(Sender: TObject);

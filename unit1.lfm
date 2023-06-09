@@ -29,22 +29,10 @@ object Form1: TForm1
     Options = []
     TabOrder = 0
   end
-  object DBGrid1: TDBGrid
-    Left = 0
-    Height = 235
-    Top = 25
-    Width = 603
-    Align = alTop
-    Color = clWindow
-    Columns = <>
-    DataSource = DataSource1
-    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns, dgDblClickAutoSize]
-    TabOrder = 1
-  end
   object RxDBGrid1: TRxDBGrid
     Left = 0
-    Height = 296
-    Top = 260
+    Height = 300
+    Top = 256
     Width = 603
     ColumnDefValues.BlobText = '(blob)'
     TitleButtons = False
@@ -118,22 +106,25 @@ object Form1: TForm1
     DataSource = DataSource1
     Flat = True
     Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-    TabOrder = 2
+    TabOrder = 1
   end
   object VirtualDBGrid1: TVirtualDBGrid
-    Left = 16
-    Height = 100
-    Top = 128
-    Width = 496
+    Left = 0
+    Height = 231
+    Top = 25
+    Width = 603
+    Align = alTop
+    EditDelay = 0
     Header.AutoSizeIndex = 0
     Header.Columns = <>
     Header.MainColumn = -1
-    Header.Options = [hoColumnResize, hoDrag, hoHotTrack, hoShowHint, hoShowSortGlyphs, hoVisible]
-    TabOrder = 3
+    Header.Options = [hoAutoResize, hoColumnResize, hoDrag, hoHotTrack, hoShowHint, hoShowSortGlyphs, hoVisible]
+    TabOrder = 2
     DBOptions.DataSource = DataSource1
     DBOptions.OddRowColor = 16119285
     DBOptions.EvenRowColor = clWindow
     DBOptions.SortColumnBgColor = 14745599
+    DBOptions.AdvOptions = [aoEditable, aoStrippedRows, aoShowHorzLines, aoShowVertLines, aoAutoInsertIndicator, aoAllowSorting, aoHighlightSortColumn, aoHourGlassCursor, aoSortDBFieldColumns, aoEditDBFieldColumns, aoSortCalculatedColumns, aoEditOnDblClick]
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8

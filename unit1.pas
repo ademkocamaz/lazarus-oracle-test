@@ -14,7 +14,6 @@ type
 
   TForm1 = class(TForm)
     DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     RxDBGrid1: TRxDBGrid;
     VirtualDBGrid1: TVirtualDBGrid;
